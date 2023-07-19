@@ -5,6 +5,7 @@
  */
 package filereader;
 
+import java.awt.Window;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.UIManager;
@@ -26,8 +27,11 @@ public class FileReader {
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             Logger.getLogger(FileReader.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+        FrameReader frame = new FrameReader();
+        frame.setTitle("Чтение данных из файлов");
+        FrameReader.setDefaultLookAndFeelDecorated(true);
+        frame.setType(Window.Type.NORMAL);
+        frame.setVisible(true);
     }
     
 }
